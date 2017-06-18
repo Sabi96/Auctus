@@ -1,22 +1,16 @@
 package com.sabi.project.auctus.Dialog;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.sabi.project.auctus.Model.User;
 import com.sabi.project.auctus.R;
-
-import org.w3c.dom.Text;
-
-import static android.R.attr.name;
 
 public class SellerDetailsDialog extends Dialog implements
         android.view.View.OnClickListener {

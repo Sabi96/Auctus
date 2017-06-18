@@ -1,6 +1,5 @@
 package com.sabi.project.auctus.AsyncTask;
 
-import android.content.Context;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.ListView;
@@ -8,7 +7,6 @@ import android.widget.TextView;
 
 import com.j256.ormlite.dao.Dao;
 import com.sabi.project.auctus.Adapter.AuctionListAdapter;
-import com.sabi.project.auctus.Dao.DatabaseHelper;
 import com.sabi.project.auctus.Model.Auction;
 import com.sabi.project.auctus.Model.Bid;
 

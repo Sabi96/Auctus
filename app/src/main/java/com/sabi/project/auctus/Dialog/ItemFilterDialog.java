@@ -1,6 +1,5 @@
 package com.sabi.project.auctus.Dialog;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +14,6 @@ public class ItemFilterDialog extends Dialog implements
         android.view.View.OnClickListener {
 
     public ItemsActivity ac;
-    public Dialog d;
     public Button yes, no;
     public EditText name;
     public EditText desc;

@@ -3,14 +3,10 @@ package com.sabi.project.auctus.AsyncTask;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.os.Environment;
-import android.view.View;
 import android.widget.ImageView;
 
 import com.sabi.project.auctus.Other.ImageTools;
 import com.sabi.project.auctus.R;
-
-import java.io.File;
 
 /**
  * Created by Sabi on 3.6.2017..

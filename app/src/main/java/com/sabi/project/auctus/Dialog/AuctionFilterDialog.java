@@ -1,6 +1,5 @@
 package com.sabi.project.auctus.Dialog;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
