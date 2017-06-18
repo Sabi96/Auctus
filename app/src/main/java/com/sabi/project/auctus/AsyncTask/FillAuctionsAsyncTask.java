@@ -65,6 +65,9 @@ public class FillAuctionsAsyncTask extends AsyncTask<Object,Void,ArrayList<Aucti
         if (auctions.isEmpty()){
             noPart.setVisibility(View.VISIBLE);
             listView.setVisibility(View.GONE);
+        }else{
+            noPart.setVisibility(View.GONE);
+            listView.setVisibility(View.VISIBLE);
         }
         adapter.notifyDataSetChanged();
     }

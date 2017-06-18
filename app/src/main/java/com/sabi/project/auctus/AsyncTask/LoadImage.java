@@ -40,7 +40,5 @@ public class LoadImage extends AsyncTask<Object, Void, Bitmap> {
     protected void onPostExecute(Bitmap result) {
         if (result!=null)
             icon.setImageBitmap(result);
-        else
-            icon.setImageResource(R.drawable.icon);
     }
 }

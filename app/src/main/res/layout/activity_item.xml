@@ -90,7 +90,7 @@
                     android:layout_width="180dp"
                     android:layout_height="180dp"
                     android:id="@+id/drawer_user_image"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:src="@mipmap/iconnew"/>
                 <TextView
                     android:layout_margin="1dp"
                     android:textAlignment="center"
