@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Splashscreen settings"
+        android:key="splash_settings">
+
+        <CheckBoxPreference
+            android:defaultValue="@string/show_splash_def"
+            android:key="@string/show_splash"
+            android:summary="@string/show_splash_summ"
+            android:title="@string/show_splash_title" />
+
+        <ListPreference
+            android:dependency="@string/show_splash"
+            android:dialogTitle="@string/splash_length"
+            android:entries="@array/splash_length"
+            android:entryValues="@array/splash_length_values"
+            android:key="@string/splash_length"
+            android:title="@string/splash_length"
+            android:summary="@string/show_splash_summ"
+            android:defaultValue="2000"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/user_settings"
+        android:key="user_settings">
+
+        <EditTextPreference
+            android:key="user_name"
+            android:title="@string/user_name"
+            android:defaultValue="@string/user_name_def"/>
+
+        <EditTextPreference
+            android:key="user_email"
+            android:title="@string/user_email"
+            android:defaultValue="@string/user_email_def"/>
+
+        <EditTextPreference
+            android:key="user_address"
+            android:title="@string/user_address"
+            android:defaultValue="@string/user_address_def"/>
+
+        <EditTextPreference
+            android:key="user_password"
+            android:title="@string/user_password"
+            android:defaultValue="@string/user_password_def"
+            android:inputType="textPassword"/>
+
+        <EditTextPreference
+            android:key="user_phone"
+            android:title="@string/user_phone"
+            android:defaultValue="@string/user_phone_def"
+            android:inputType="phone"/>
+
+        <Preference
+            android:key="user_image"
+            android:title="Profile picture"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

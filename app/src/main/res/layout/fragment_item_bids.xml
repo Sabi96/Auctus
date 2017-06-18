@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_vertical|left">
+
+    <ListView
+        android:background="@color/colorPrimary"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="0dp"
+        android:padding="2dp"
+        android:id="@+id/auction_bids"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/auction_new_bid"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_bid"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:layout_marginTop="0dp"
+        android:id="@+id/lblNoAuctions"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp" />
+
+</LinearLayout>

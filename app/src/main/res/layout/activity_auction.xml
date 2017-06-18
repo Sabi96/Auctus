@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuctionActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <!-- Add this, so AppBarLayout has a bug, which causes ViewPager not to show listview entirely on the screen
+        Adding this view fixes (workaround) the problem -->
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarItems"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:layout_scrollFlags="scroll|enterAlways"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!-- The main content view -->
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            tools:context="com.sabi.project.auctus.AuctionActivity">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="348dp"
+                android:layout_height="474dp"
+                tools:layout_editor_absoluteY="8dp"
+                tools:layout_editor_absoluteX="8dp">
+
+                <RelativeLayout
+                    android:paddingTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/auction_user_image"
+                        android:layout_height="80dp"
+                        android:layout_width="80dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:paddingTop="0dp"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/auction_user_image">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:id="@+id/lblAuction_user_name"
+                            android:text="@string/user_name_placeholder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_below="@id/lblAuction_user_name"
+                            android:id="@+id/auction_user_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/user_email_placeholder"/>
+
+                        <Button
+                            android:visibility="gone"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="3dp"
+                            android:layout_below="@id/auction_user_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:id="@+id/open_seller_dialog"
+                            android:text="@string/seller_contact"/>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:paddingBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout_item">
+
+                    <ImageView
+                        android:id="@+id/auction_item_image"
+                        android:layout_margin="5dp"
+                        android:layout_height="80dp"
+                        android:layout_width="80dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:scrollHorizontally="false"
+                        android:id="@+id/lblAuction_item_name"
+                        android:layout_toRightOf="@id/auction_item_image"
+                        android:text="@string/item_name_placeholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/lblAuction_item_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lblAuction_item_name"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/auction_item_image"
+                        android:scrollHorizontally="false"
+                        android:text="@string/auction_item_description_placeholder" />
+
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bids"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textAlignment="center"/>
+
+                <ListView
+                    android:background="@color/colorPrimary"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="0dp"
+                    android:padding="2dp"
+                    android:id="@+id/auction_bids_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblAuction_start_date"
+                    android:text="@string/auction_startdate_placeholder"
+                    android:layout_alignParentBottom="true">
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblAuction_end_date"
+                    android:text="@string/auction_enddate_placeholder"
+                    android:layout_alignParentBottom="true">
+
+                </TextView>
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <!-- The navigation drawer -->
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:id="@+id/drawerPane"
+            android:layout_gravity="start"
+            android:background="#ffffffff"
+            android:clickable="true">
+
+            <!-- List of Actions (pages) -->
+            <ListView
+                android:id="@+id/drawerList"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:choiceMode="singleChoice" />
+
+            <LinearLayout
+                android:layout_below="@id/drawerList"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="3dp"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:id="@+id/drawer_user_image"
+                    android:src="@mipmap/ic_launcher"/>
+                <TextView
+                    android:layout_margin="1dp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/drawer_user_name"
+                    android:text="@string/user_name_placeholder"/>
+
+                <TextView
+                    android:layout_margin="1dp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/drawer_user_email"
+                    android:text="@string/user_email_placeholder"/>
+
+                <TextView
+                    android:layout_margin="1dp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/drawer_user_address"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_margin="1dp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/drawer_user_phone"
+                    android:text=""/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</LinearLayout>

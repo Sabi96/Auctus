@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name_seller"
+            android:id="@+id/user_name"/>
+        <TextView
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_toRightOf="@id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seller_name"
+            android:text="@string/user_name_placeholder"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_email_seller"
+            android:id="@+id/user_email"/>
+        <TextView
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_toRightOf="@id/user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seller_email"
+            android:text="@string/user_email_placeholder"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seller_address_layout">
+
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/user_address"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_address_seller" />
+        <TextView
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_toRightOf="@id/user_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seller_address"
+            android:text=""/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seller_phone_layout">
+
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/user_phone"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_phone_seller" />
+        <TextView
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seller_phone"
+            android:text=""/>
+    </RelativeLayout>
+
+    <Button
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_dialog_close"
+            android:text="Close"/>
+
+</LinearLayout>
